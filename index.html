@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Firebase Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Getting started with Firebase">
+  <meta name="author" content="Rasmus Cederdorff">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body onhashchange="pageChange()">
+  <nav class="tabbar">
+    <a href="#home">Home</a>
+    <a href="#products">Produkter</a>
+    <a href="#login">Login</a>
+  </nav>
+  <section id="home" class="page">
+    
+  </section>
+
+  <section id="products" class="page"></section>
+
+  <section id="login" class="page">
+    <article id="content" class="grid-container"></article>
+  <form id="userForm">
+    <h2>Tilføj nyt produkt</h2>
+    <input type="text" id="name" placeholder="Navn på produkt" required>
+    <input type="text" id="description" placeholder="Beskriv produktet" required>
+    <input type="text" id="cut" placeholder="Hvilken udskæring?" required>
+    <input type="text" id="category" placeholder="Kategori" required>
+    <input type="text" id="price" placeholder="Pris" required>
+    <input type="text" id="weight" placeholder="Vægt" required>
+    <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">
+    <img id="imagePreview" class="image-preview">
+    <button type="button" name="button" id="btn-create">Tilføj produkt</button>
+  </form>
+
+  <form id="form-update">
+    <h2>Updater produkt</h2>
+    <input type="text" id="name-update" placeholder="Navn på produkt" required>
+    <input type="text" id="description-update" placeholder="Beskriv produktet" required>
+    <input type="text" id="cut-update" placeholder="Hvilken udskæring?" required>
+    <input type="text" id="category-update" placeholder="Kategori" required>
+    <input type="text" id="price-update" placeholder="Pris" required>
+    <input type="text" id="weight-update" placeholder="Vægt" required>
+    <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreviewUpdate')">
+    <img id="imagePreviewUpdate" class="image-preview">
+    <button type="button" name="button" id="btn-update">Updater produkt</button>
+  </form>
+</section>
+
+  <!-- loader  -->
+  <!-- <section id="loader">
+    <section class="spinner"></section>
+  </section> -->
+  <!-- main js file -->
+  <script src="js/main.js" type="module"></script>
+  <script src="js/spa.js"></script>
+</body>
+
+</html>
